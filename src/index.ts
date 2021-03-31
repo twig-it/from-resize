@@ -1,24 +1,53 @@
-import { fromResize } from "@samskara-ui/from-resize";
-import "./styles.css";
+import { fromResize } from '@samskara-ui/from-resize';
+import { ResizeDirection } from '@samskara-ui/from-resize';
+import './styles.css';
 
-const containerDiv = document.getElementById("app-content");
+const containerDiv = document.getElementById('app-content');
+const rowDiv = document.getElementById('row');
 
 // Add contents
-const content: HTMLElement = document.createElement("div")!;
-content.className = "flex-item";
+const child1: HTMLElement = document.createElement('div')!;
+child1.className = 'child-1';
 
-containerDiv!.appendChild(content);
+const child2: HTMLElement = document.createElement('div')!;
+child2.className = 'child-2';
 
-fromResize(content).subscribe((dimension: ClientRect) =>
-  console.log(
-    `From Resize -> Dimension Updated. New Client Rect: ${JSON.stringify(
-      dimension
-    )}`
-  )
+const child3: HTMLElement = document.createElement('div')!;
+child3.className = 'child-3';
+
+rowDiv!.appendChild(child1);
+rowDiv!.appendChild(child2);
+rowDiv!.appendChild(child3);
+
+// First Child - ALL
+fromResize(child1, { direction: ResizeDirection.All, emitOnStart: false }).subscribe(
+  (dimension: ClientRect) =>
+    (child1.innerHTML = `From Resize: direction ${ResizeDirection.All} -> Updated dimension ${dimension.width} height: ${dimension.height}`)
 );
 
-setInterval(() => {
-  const newWidth = `${Math.floor(Math.max(10, Math.random() * 100))}%`;
-  content.style.width = newWidth;
-  console.log(`Set Interval -> Changed width to ${newWidth}`);
-}, 3000);
+// Second Child - Horizontal
+fromResize(child2, { direction: ResizeDirection.Horizontal, emitOnStart: false }).subscribe(
+  (dimension: ClientRect) =>
+    (child2.innerHTML = `From Resize: direction ${ResizeDirection.Horizontal} -> Updated width: ${dimension.width} height: ${dimension.height}`)
+);
+
+// Third Child - Horizontal
+fromResize(child3, { direction: ResizeDirection.Vertical, emitOnStart: false }).subscribe(
+  (dimension: ClientRect) =>
+    (child3.innerHTML = `From Resize: direction ${ResizeDirection.Vertical} -> -> Updated width: ${dimension.width} height: ${dimension.height}`)
+);
+
+// Remove Button
+const rowChildRemoveButton = document.createElement('button');
+rowChildRemoveButton.innerText = child1.parentElement === rowDiv ? 'Remove Child 1' : 'Add Child 1';
+rowChildRemoveButton.className = 'button';
+rowChildRemoveButton.onclick = () => {
+  if (child1.parentElement === rowDiv) {
+    rowDiv?.removeChild(child1);
+    rowChildRemoveButton.innerText = 'Add Child 1';
+  } else {
+    rowDiv?.insertBefore(child1, child2);
+    rowChildRemoveButton.innerText = 'Remove Child 1';
+  }
+};
+containerDiv?.appendChild(rowChildRemoveButton);

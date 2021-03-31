@@ -2,4 +2,4 @@
  * Public API Surface of your library
  */
 
-export { fromResize } from "./resize/resize";
+export { fromResize, ResizeOptions, ResizeDirection } from './resize/resize';

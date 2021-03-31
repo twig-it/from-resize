@@ -4,8 +4,8 @@ import typescript from "@rollup/plugin-typescript";
 import pkg from "./package.json";
 import copy from "rollup-plugin-copy";
 
-const rootDir = "./projects/your-library-name";
-const outputDir = "dist/your-library-name";
+const rootDir = "./projects/from-resize";
+const outputDir = "dist/from-resize";
 
 export default {
   input: `${rootDir}/src/index.ts`,

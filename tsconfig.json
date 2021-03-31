@@ -20,8 +20,8 @@
     "outDir": "dist/lib",
     "types": ["jest"],
     "paths": {
-      "@org/your-library-name": ["dist/your-library-name"],
-      "@org/your-library-name/*": ["dist/your-library-name/*"]
+      "@org/from-resize": ["dist/from-resize"],
+      "@org/from-resize/*": ["dist/from-resize/*"]
     }
   },
   "include": ["src/**/*"]

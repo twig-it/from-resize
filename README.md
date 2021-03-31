@@ -22,8 +22,8 @@ Salient Features:
 ## Instruction
 
 - Use this repo as a template for your project
-- Please replace each occurrence of `your-library-name` with your desired name.
-- Please replace each occurrence of `your-app-name` with your desired name.
+- Please replace each occurrence of `from-resize` with your desired name.
+- Please replace each occurrence of `from-resize-demo-app` with your desired name.
 - Please replace each occurrence of `org` with your desired name.
 - Add your demo app contents
 - Test all scripts

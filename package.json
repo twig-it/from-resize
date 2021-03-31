@@ -1,20 +1,20 @@
 {
-  "name": "@org/your-repo-name",
+  "name": "@samskara-ui/from-resize-repo-name",
   "version": "0.0.0-development",
   "author": "Author",
-  "repository": "git@github.com:org/your-repo-name.git",
+  "repository": "git@github.com:samskara-ui/from-resize-repo-name.git",
   "license": "MIT",
   "keywords": [],
   "scripts": {
     "clean": "rm -rf dist",
     "build:ci": "npm run bundle:libs && npm run build:app:prod",
-    "bundle:libs": "rollup -c ./projects/your-library-name/rollup.config.ts",
+    "bundle:libs": "rollup -c ./projects/from-resize/rollup.config.ts",
     "build:app:dev": "webpack build --mode=development -c webpack.config.js",
     "build:app:prod": "webpack build --mode=production -c webpack.config.js",
     "build:app:serve": "webpack serve",
     "commit": "git-cz",
     "semantic-release": "semantic-release",
-    "docs:types": "typedoc ./projects/your-library-name/src/index.ts --tsconfig ./projects/your-library-name/tsconfig.lib.json --out docs/types",
+    "docs:types": "typedoc ./projects/from-resize/src/index.ts --tsconfig ./projects/from-resize/tsconfig.lib.json --out docs/types",
     "docs": "rm -rf docs && npx webpack build --mode=development -o docs && npm run docs:types"
   },
   "private": true,
@@ -74,7 +74,7 @@
       [
         "@semantic-release/npm",
         {
-          "pkgRoot": "dist/your-library-name"
+          "pkgRoot": "dist/from-resize"
         }
       ],
       [

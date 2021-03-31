@@ -25,10 +25,10 @@ module.exports = {
   ],
   watchPathIgnorePatterns: ["test-results"],
   collectCoverageFrom: ["src/**/*.ts", "projects/*/src/**/*.ts", "!**/*.d.ts"],
-  coverageDirectory: "coverage/your-app-name",
+  coverageDirectory: "coverage/from-resize-demo-app",
   modulePathIgnorePatterns: ["<rootDir>/dist/"], // Need to reset from app project, but empty is merged
   testMatch: ["<rootDir>/(src|projects)/**/+(*.)+(spec|test).ts"],
   moduleNameMapper: {
-    "@org/your-library-name": "<rootDir>/dist/your-library-name",
+    "@org/from-resize": "<rootDir>/dist/from-resize",
   },
 };

@@ -1481,7 +1481,7 @@
                 }
             });
         });
-        resizeObserver.observe(element);
+        resizeObserver.observe(element, { box: 'border-box' });
         return () => {
             resizeObserver.unobserve(element);
             resizeObserver.disconnect();
@@ -1538,7 +1538,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "h1,\nh2 {\n  font-family: Lato;\n}\n\n.app-root {\n  width: 100%;\n  height: 100vh;\n\n  display: flex;\n  flex-direction: column;\n}\n\n.title {\n  display: flex;\n  align-items: center;\n}\n\n.docs {\n  margin-left: 24px;\n}\n\n.row {\n  width: 100%;\n  height: 200px;\n\n  display: flex;\n}\n\n.child-1 {\n  flex: 1 1 auto;\n\n  border: 1px solid red;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.child-2 {\n  flex: 1 1 auto;\n\n  border: 1px solid blue;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.child-3 {\n  flex: 1 1 auto;\n  border: 1px solid green;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n", "",{"version":3,"sources":["webpack://./src/styles.css"],"names":[],"mappings":"AAAA;;EAEE,iBAAiB;AACnB;;AAEA;EACE,WAAW;EACX,aAAa;;EAEb,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,aAAa;EACb,mBAAmB;AACrB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,WAAW;EACX,aAAa;;EAEb,aAAa;AACf;;AAEA;EACE,cAAc;;EAEd,qBAAqB;EACrB,aAAa;EACb,mBAAmB;EACnB,uBAAuB;AACzB;;AAEA;EACE,cAAc;;EAEd,sBAAsB;EACtB,aAAa;EACb,mBAAmB;EACnB,uBAAuB;AACzB;;AAEA;EACE,cAAc;EACd,uBAAuB;EACvB,aAAa;EACb,mBAAmB;EACnB,uBAAuB;AACzB","sourcesContent":["h1,\nh2 {\n  font-family: Lato;\n}\n\n.app-root {\n  width: 100%;\n  height: 100vh;\n\n  display: flex;\n  flex-direction: column;\n}\n\n.title {\n  display: flex;\n  align-items: center;\n}\n\n.docs {\n  margin-left: 24px;\n}\n\n.row {\n  width: 100%;\n  height: 200px;\n\n  display: flex;\n}\n\n.child-1 {\n  flex: 1 1 auto;\n\n  border: 1px solid red;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.child-2 {\n  flex: 1 1 auto;\n\n  border: 1px solid blue;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.child-3 {\n  flex: 1 1 auto;\n  border: 1px solid green;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "h1,\nh2 {\n  font-family: Lato;\n}\n\n.app-root {\n  width: 100%;\n  height: 100vh;\n\n  display: flex;\n  flex-direction: column;\n}\n\n.title {\n  display: flex;\n  align-items: center;\n}\n\n.docs {\n  margin-left: 24px;\n}\n\n.row {\n  width: 100%;\n  height: 200px;\n\n  display: flex;\n}\n\n.child-1 {\n  flex: 1 1 auto;\n\n  border: 1px solid red;\n  display: flex;\n  align-items: center;\n}\n\n.child-2 {\n  flex: 1 1 auto;\n\n  border: 1px solid blue;\n  display: flex;\n  align-items: center;\n}\n\n.child-3 {\n  flex: 1 1 auto;\n  border: 1px solid green;\n  display: flex;\n  align-items: center;\n}\n\nspan {\n  width: 100px;\n}\n", "",{"version":3,"sources":["webpack://./src/styles.css"],"names":[],"mappings":"AAAA;;EAEE,iBAAiB;AACnB;;AAEA;EACE,WAAW;EACX,aAAa;;EAEb,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,aAAa;EACb,mBAAmB;AACrB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,WAAW;EACX,aAAa;;EAEb,aAAa;AACf;;AAEA;EACE,cAAc;;EAEd,qBAAqB;EACrB,aAAa;EACb,mBAAmB;AACrB;;AAEA;EACE,cAAc;;EAEd,sBAAsB;EACtB,aAAa;EACb,mBAAmB;AACrB;;AAEA;EACE,cAAc;EACd,uBAAuB;EACvB,aAAa;EACb,mBAAmB;AACrB;;AAEA;EACE,YAAY;AACd","sourcesContent":["h1,\nh2 {\n  font-family: Lato;\n}\n\n.app-root {\n  width: 100%;\n  height: 100vh;\n\n  display: flex;\n  flex-direction: column;\n}\n\n.title {\n  display: flex;\n  align-items: center;\n}\n\n.docs {\n  margin-left: 24px;\n}\n\n.row {\n  width: 100%;\n  height: 200px;\n\n  display: flex;\n}\n\n.child-1 {\n  flex: 1 1 auto;\n\n  border: 1px solid red;\n  display: flex;\n  align-items: center;\n}\n\n.child-2 {\n  flex: 1 1 auto;\n\n  border: 1px solid blue;\n  display: flex;\n  align-items: center;\n}\n\n.child-3 {\n  flex: 1 1 auto;\n  border: 1px solid green;\n  display: flex;\n  align-items: center;\n}\n\nspan {\n  width: 100px;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -34686,24 +34686,27 @@ var rowDiv = document.getElementById('row');
 // Add contents
 var child1 = document.createElement('div');
 child1.className = 'child-1';
+child1.appendChild(document.createElement('span'));
 var child2 = document.createElement('div');
 child2.className = 'child-2';
+child2.appendChild(document.createElement('span'));
 var child3 = document.createElement('div');
 child3.className = 'child-3';
+child3.appendChild(document.createElement('span'));
 rowDiv.appendChild(child1);
 rowDiv.appendChild(child2);
 rowDiv.appendChild(child3);
 // First Child - ALL
 (0,_samskara_ui_from_resize__WEBPACK_IMPORTED_MODULE_0__.fromResize)(child1, { direction: "all" /* All */, emitOnStart: false }).subscribe(function (dimension) {
-    return (child1.innerHTML = "From Resize: direction " + "all" /* All */ + " -> Updated dimension " + dimension.width + " height: " + dimension.height);
+    return (child1.children[0].innerHTML = "From Resize: direction " + "all" /* All */ + " -> Updated dimension " + dimension.width + " height: " + dimension.height);
 });
 // Second Child - Horizontal
 (0,_samskara_ui_from_resize__WEBPACK_IMPORTED_MODULE_0__.fromResize)(child2, { direction: "horizontal" /* Horizontal */, emitOnStart: false }).subscribe(function (dimension) {
-    return (child2.innerHTML = "From Resize: direction " + "horizontal" /* Horizontal */ + " -> Updated width: " + dimension.width + " height: " + dimension.height);
+    return (child2.children[0].innerHTML = "From Resize: direction " + "horizontal" /* Horizontal */ + " -> Updated width: " + dimension.width + " height: " + dimension.height);
 });
 // Third Child - Horizontal
 (0,_samskara_ui_from_resize__WEBPACK_IMPORTED_MODULE_0__.fromResize)(child3, { direction: "vertical" /* Vertical */, emitOnStart: false }).subscribe(function (dimension) {
-    return (child3.innerHTML = "From Resize: direction " + "vertical" /* Vertical */ + " -> -> Updated width: " + dimension.width + " height: " + dimension.height);
+    return (child3.children[0].innerHTML = "From Resize: direction " + "vertical" /* Vertical */ + " -> -> Updated width: " + dimension.width + " height: " + dimension.height);
 });
 // Remove Button
 var rowChildRemoveButton = document.createElement('button');

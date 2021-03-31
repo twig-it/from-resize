@@ -5,11 +5,16 @@ export const fromResize: (
   options?: ResizeOptions
 ) => Observable<ClientRect> = (
   element: Element,
-  options: ResizeOptions = { emitOnStart: true }
+  options?: Partial<ResizeOptions>
 ) =>
   new Observable((subscriber) => {
+    const resolvedOptions = {
+      ...options,
+      ...{ direction: ResizeDirection.All, emitOnStart: true },
+    };
+
     const resizeObserver = new ResizeObserver((entries) => {
-      entries.forEach((entry: { target: Element; contentRect: ClientRect }) => {
+      entries.forEach((entry) => {
         if (entry.target === element) {
           subscriber.next(entry.contentRect);
         }
@@ -18,7 +23,7 @@ export const fromResize: (
 
     resizeObserver.observe(element);
 
-    if (options.emitOnStart) {
+    if (resolvedOptions.emitOnStart) {
       subscriber.next(element.getBoundingClientRect());
     }
 
@@ -27,4 +32,11 @@ export const fromResize: (
 
 export interface ResizeOptions {
   emitOnStart: boolean;
+  direction: ResizeDirection;
+}
+
+export const enum ResizeDirection {
+  All = "all",
+  Horizontal = "horizontal",
+  Vertical = "vertical",
 }

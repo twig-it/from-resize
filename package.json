@@ -1,8 +1,8 @@
 {
-  "name": "@samskara-ui/from-resize-repo-name",
+  "name": "@samskara-ui/from-resize",
   "version": "0.0.0-development",
   "author": "Author",
-  "repository": "git@github.com:samskara-ui/from-resize-repo-name.git",
+  "repository": "git@github.com:samskara-ui/from-resize.git",
   "license": "MIT",
   "keywords": [],
   "scripts": {

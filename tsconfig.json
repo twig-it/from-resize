@@ -20,8 +20,8 @@
     "outDir": "dist/lib",
     "types": ["jest"],
     "paths": {
-      "@org/from-resize": ["dist/from-resize"],
-      "@org/from-resize/*": ["dist/from-resize/*"]
+      "@samskara-ui/from-resize": ["dist/from-resize"],
+      "@samskara-ui/from-resize/*": ["dist/from-resize/*"]
     }
   },
   "include": ["src/**/*"]

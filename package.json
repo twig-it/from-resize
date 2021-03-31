@@ -106,5 +106,8 @@
       "pre-push": "npm run build:ci",
       "pre-commit": "pretty-quick --staged"
     }
+  },
+  "dependencies": {
+    "rxjs": "^6.6.7"
   }
 }

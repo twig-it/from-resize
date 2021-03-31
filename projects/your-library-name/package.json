@@ -1,0 +1,46 @@
+{
+  "name": "@org/your-library-name",
+  "version": "0.0.0-development",
+  "author": "Author Name",
+  "repository": "git@github.com:org/your-repo-name.git",
+  "license": "MIT",
+  "main": "./your-library-name.umd.js",
+  "module": "./your-library-name.es5.js",
+  "typings": "./types/index.d.ts",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "keywords": [],
+  "public": true,
+  "peerDependencies": {},
+  "devDependencies": {},
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "CHANGELOG.md"
+        }
+      ],
+      [
+        "@semantic-release/github",
+        {
+          "assets": [
+            [
+              "dist"
+            ],
+            {
+              "path": "CHANGELOG.md",
+              "label": "Changelog"
+            }
+          ]
+        }
+      ]
+    ]
+  }
+}

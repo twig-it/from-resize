@@ -1,0 +1,26 @@
+h1,
+h2 {
+  font-family: Lato;
+}
+
+.app-root {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.docs {
+  margin-left: 24px;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}

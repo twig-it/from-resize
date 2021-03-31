@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/spec",
+    "types": ["jest", "webpack-env"],
+    "module": "commonjs"
+  },
+  "include": [
+    "src/**/*.spec.ts",
+    "src/**/*.test.ts",
+    "src/**/*.d.ts",
+    "projects/**/*.d.ts",
+    "projects/**/*.spec.ts",
+    "projects/**/*.test.ts"
+  ]
+}

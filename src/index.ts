@@ -8,12 +8,15 @@ const rowDiv = document.getElementById('row');
 // Add contents
 const child1: HTMLElement = document.createElement('div')!;
 child1.className = 'child-1';
+child1.appendChild(document.createElement('span'));
 
 const child2: HTMLElement = document.createElement('div')!;
 child2.className = 'child-2';
+child2.appendChild(document.createElement('span'));
 
 const child3: HTMLElement = document.createElement('div')!;
 child3.className = 'child-3';
+child3.appendChild(document.createElement('span'));
 
 rowDiv!.appendChild(child1);
 rowDiv!.appendChild(child2);
@@ -22,19 +25,19 @@ rowDiv!.appendChild(child3);
 // First Child - ALL
 fromResize(child1, { direction: ResizeDirection.All, emitOnStart: false }).subscribe(
   (dimension: ClientRect) =>
-    (child1.innerHTML = `From Resize: direction ${ResizeDirection.All} -> Updated dimension ${dimension.width} height: ${dimension.height}`)
+    (child1.children[0].innerHTML = `From Resize: direction ${ResizeDirection.All} -> Updated dimension ${dimension.width} height: ${dimension.height}`)
 );
 
 // Second Child - Horizontal
 fromResize(child2, { direction: ResizeDirection.Horizontal, emitOnStart: false }).subscribe(
   (dimension: ClientRect) =>
-    (child2.innerHTML = `From Resize: direction ${ResizeDirection.Horizontal} -> Updated width: ${dimension.width} height: ${dimension.height}`)
+    (child2.children[0].innerHTML = `From Resize: direction ${ResizeDirection.Horizontal} -> Updated width: ${dimension.width} height: ${dimension.height}`)
 );
 
 // Third Child - Horizontal
 fromResize(child3, { direction: ResizeDirection.Vertical, emitOnStart: false }).subscribe(
   (dimension: ClientRect) =>
-    (child3.innerHTML = `From Resize: direction ${ResizeDirection.Vertical} -> -> Updated width: ${dimension.width} height: ${dimension.height}`)
+    (child3.children[0].innerHTML = `From Resize: direction ${ResizeDirection.Vertical} -> -> Updated width: ${dimension.width} height: ${dimension.height}`)
 );
 
 // Remove Button

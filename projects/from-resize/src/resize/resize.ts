@@ -32,7 +32,7 @@ const buildResize = (element: Element): Observable<ClientRect> =>
       });
     });
 
-    resizeObserver.observe(element);
+    resizeObserver.observe(element, { box: 'border-box' });
 
     return () => {
       resizeObserver.unobserve(element);

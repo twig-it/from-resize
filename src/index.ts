@@ -1,5 +1,5 @@
-import { fromResize } from '@samskara-ui/from-resize';
-import { ResizeDirection } from '@samskara-ui/from-resize';
+import { fromResize } from '@twig-it/from-resize';
+import { ResizeDirection } from '@twig-it/from-resize';
 import './styles.css';
 
 const containerDiv = document.getElementById('app-content');

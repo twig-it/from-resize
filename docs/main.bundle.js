@@ -1292,7 +1292,7 @@
   \**********************/
     __webpack_require__.r(__webpack_exports__);
     /* harmony import */ var _samskara_ui_from_resize__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! @samskara-ui/from-resize */ './dist/from-resize/from-resize.umd.js'
+      /*! @twig-it/from-resize */ './dist/from-resize/from-resize.umd.js'
     );
     /* harmony import */ var _samskara_ui_from_resize__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/ __webpack_require__.n(
       _samskara_ui_from_resize__WEBPACK_IMPORTED_MODULE_0__

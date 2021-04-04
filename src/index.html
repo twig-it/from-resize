@@ -5,9 +5,27 @@
         <h1>From Resize Demo</h1>
         <h2 class="docs" id="docs"><a href="./types/index.html">Docs</a></h2>
       </div>
-      <h4 class="container-title">Container with variable width. See Console for Output!</h4>
+      <h4 class="container-title">Container with variable width. See Console for Output2!</h4>
       <div class="container" id="app-content">
-        <div class="row" id="row"></div>
+        <div class="controls" id="controls">
+          <div class="resize">
+            <input type="checkbox" id="use-resize" name="vehicle1" value="Bike" />
+            <label for="vehicle1">Use resize </label><br />
+          </div>
+          <div class="watch-direction">
+            <label for="direction">Watch Direction: </label><br />
+            <input type="radio" name="direction" value="all" id="all" /> All
+            <input type="radio" name="direction" value="horizontal" id="horizontal" /> Horizontal
+            <input type="radio" name="direction" value="vertical" id="vertical" /> Vertical
+          </div>
+          <button class="remove-child" id="remove-child">Remove First Child</button>
+        </div>
+        <div class="charts-container" id="charts-container">
+          <div class="child-1" id="child-1"></div>
+          <div class="chart" id="chart-parent">
+            <canvas class="canvas-chart" id="canvas-chart"></canvas>
+          </div>
+        </div>
         <div class="column" id="column"></div>
       </div>
     </div>

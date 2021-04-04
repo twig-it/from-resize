@@ -27,29 +27,44 @@ h2 {
   display: flex;
 }
 
+span {
+  width: 100px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.watch-direction {
+  margin-left: 16px;
+  display: flex;
+}
+
+.remove-child {
+  margin-left: 16px;
+}
+
+.charts-container {
+  display: flex;
+}
+
 .child-1 {
   flex: 1 1 auto;
-
+  width: 50%;
+  height: 200px;
   border: 1px solid red;
   display: flex;
   align-items: center;
 }
 
-.child-2 {
+.chart {
   flex: 1 1 auto;
-
-  border: 1px solid blue;
-  display: flex;
-  align-items: center;
+  width: 50%;
 }
 
-.child-3 {
-  flex: 1 1 auto;
-  border: 1px solid green;
-  display: flex;
-  align-items: center;
-}
-
-span {
-  width: 100px;
+.canvas-chart {
+  height: 100%;
+  width: 100%;
 }

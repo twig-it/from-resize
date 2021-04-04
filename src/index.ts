@@ -1,56 +1,64 @@
+import { filter, takeUntil } from 'rxjs/operators';
 import { fromResize } from '@twig-it/from-resize';
 import { ResizeDirection } from '@twig-it/from-resize';
+import { chartJsOptions } from './charts-js-example/chart-js';
 import './styles.css';
+import { Chart } from 'chart.js';
+import { Subject } from 'rxjs';
 
-const containerDiv = document.getElementById('app-content');
-const rowDiv = document.getElementById('row');
+const chartsContainerDiv = document.getElementById('charts-container');
 
-// Add contents
-const child1: HTMLElement = document.createElement('div')!;
-child1.className = 'child-1';
-child1.appendChild(document.createElement('span'));
+const chartParentElement: HTMLElement = document.getElementById('chart-parent')!;
+const chartElement: HTMLCanvasElement = document.getElementById('canvas-chart')! as HTMLCanvasElement;
 
-const child2: HTMLElement = document.createElement('div')!;
-child2.className = 'child-2';
-child2.appendChild(document.createElement('span'));
+// Use Resize Checkbox
+const useResizeCheckbox = document.getElementById('use-resize')! as HTMLInputElement;
+useResizeCheckbox.checked = false;
 
-const child3: HTMLElement = document.createElement('div')!;
-child3.className = 'child-3';
-child3.appendChild(document.createElement('span'));
-
-rowDiv!.appendChild(child1);
-rowDiv!.appendChild(child2);
-rowDiv!.appendChild(child3);
-
-// First Child - ALL
-fromResize(child1, { direction: ResizeDirection.All, emitOnStart: false }).subscribe(
-  (dimension: ClientRect) =>
-    (child1.children[0].innerHTML = `From Resize: direction ${ResizeDirection.All} -> Updated dimension ${dimension.width} height: ${dimension.height}`)
-);
-
-// Second Child - Horizontal
-fromResize(child2, { direction: ResizeDirection.Horizontal, emitOnStart: false }).subscribe(
-  (dimension: ClientRect) =>
-    (child2.children[0].innerHTML = `From Resize: direction ${ResizeDirection.Horizontal} -> Updated width: ${dimension.width} height: ${dimension.height}`)
-);
-
-// Third Child - Horizontal
-fromResize(child3, { direction: ResizeDirection.Vertical, emitOnStart: false }).subscribe(
-  (dimension: ClientRect) =>
-    (child3.children[0].innerHTML = `From Resize: direction ${ResizeDirection.Vertical} -> -> Updated width: ${dimension.width} height: ${dimension.height}`)
-);
+// Resize Watch Direction
+const resizeWatchRadios = Array.from(document.querySelectorAll<HTMLInputElement>('input[name="direction"]')!);
+resizeWatchRadios[0].checked = true;
+resizeWatchRadios.forEach(radio => {
+  radio.onclick = () => {
+    const selectedDirection = resizeWatchRadios.filter(radio => radio.checked).map(radio => radio.value)[0] as ResizeDirection;
+    addResize(selectedDirection);
+  };
+});
 
 // Remove Button
-const rowChildRemoveButton = document.createElement('button');
-rowChildRemoveButton.innerText = child1.parentElement === rowDiv ? 'Remove Child 1' : 'Add Child 1';
-rowChildRemoveButton.className = 'button';
+const rowChildRemoveButton = document.getElementById('remove-child')!;
+const child1: HTMLElement = document.getElementById('child-1')!;
 rowChildRemoveButton.onclick = () => {
-  if (child1.parentElement === rowDiv) {
-    rowDiv?.removeChild(child1);
+  if (child1.parentElement === chartsContainerDiv) {
+    chartsContainerDiv?.removeChild(child1);
     rowChildRemoveButton.innerText = 'Add Child 1';
   } else {
-    rowDiv?.insertBefore(child1, child2);
+    chartsContainerDiv?.insertBefore(child1, chartParentElement);
     rowChildRemoveButton.innerText = 'Remove Child 1';
   }
 };
-containerDiv?.appendChild(rowChildRemoveButton);
+
+// Add chart
+const chartContext = chartElement.getContext('2d')!;
+const chartObject = new Chart(chartContext, chartJsOptions);
+
+// User Resize
+const destroyed$ = new Subject();
+const addResize = (direction: ResizeDirection) => {
+  // Unsubscribe previous
+  destroyed$.next();
+
+  fromResize(chartParentElement, { direction: direction, emitOnStart: false })
+    .pipe(
+      filter(() => useResizeCheckbox.checked), // Only when useResize checkbox is selected
+      takeUntil(destroyed$)
+    )
+    .subscribe((dimension: ClientRect) => {
+      chartObject.resize(dimension.width, dimension.height);
+      console.log(
+        `From Resize: direction ${ResizeDirection.All} -> Updated dimension ${dimension.width} height: ${dimension.height} ${chartObject.aspectRatio}`
+      );
+    });
+};
+
+addResize(ResizeDirection.All);

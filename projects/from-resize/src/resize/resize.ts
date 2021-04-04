@@ -6,7 +6,7 @@ export const fromResize: (element: Element, options?: Partial<ResizeOptions>) =>
   element: Element,
   options?: Partial<ResizeOptions>
 ) => {
-  const resolvedOptions: ResizeOptions = defaultsDeep(options, { direction: ResizeDirection.All, emitOnStart: true, debounceTime: 200 });
+  const resolvedOptions: ResizeOptions = defaultsDeep(options, { direction: ResizeDirection.All, emitOnStart: true, debounceTime: 10 });
   const initialRect = element.getBoundingClientRect();
 
   let resize$ = buildResize(element).pipe(debounceTime(resolvedOptions.debounceTime));

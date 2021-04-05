@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>@samskara-ui/from-resize</title>
-	<meta name="description" content="Documentation for @samskara-ui/from-resize">
+	<title>@twig-it/from-resize</title>
+	<meta name="description" content="Documentation for @twig-it/from-resize">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
 	<script async src="assets/js/search.js" id="search-script"></script>
@@ -23,7 +23,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">@samskara-ui/from-resize</a>
+					<a href="index.html" class="title">@twig-it/from-resize</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -50,7 +50,7 @@
 	</div>
 	<div class="tsd-page-title">
 		<div class="container">
-			<h1>@samskara-ui/from-resize</h1>
+			<h1>@twig-it/from-resize</h1>
 		</div>
 	</div>
 </header>
@@ -62,23 +62,59 @@
 				<a href="#from-resize" id="from-resize" style="color: inherit; text-decoration: none;">
 					<h1>From Resize</h1>
 				</a>
-				<p>While using Css Flex and Grids, child element&#39;s dimension changes depending upon the responsiveness rules that we set for its container. A lot of times, this happens without emission of window resize. These situations warrant  us to redraw or rerender the view.</p>
-				<p>Example:</p>
+				<p>We all love using CSS Flex and Grids. However, in certain cases, a change in Dom container dimension may require its content to be redrawn. To address such uses cases, <a href="https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver">Resize Observer Specification</a> was published. Resize Observer is now widely <a href="https://caniuse.com/?search=resize%20observer">supported in modern browsers</a>.  </p>
+				<p>However, In the age of <a href="https://github.com/ReactiveX/rxjs">RxJs Observables</a>, I find the API for Resize Observer a bit cumbersome to use. So I thought, it would be nice to build an RxJs wrapper around this API. </p>
+				<a href="#advantages" id="advantages" style="color: inherit; text-decoration: none;">
+					<h2>Advantages</h2>
+				</a>
 				<ul>
-					<li>D3 chart inside child container 1. Post initial render, the dimension of co</li>
+					<li>Returns an Observable that emits on every container dimension change</li>
+					<li>You can set the watch direction to be <code>Horizontal</code>, <code>Vertical</code> or <code>Both</code>.</li>
+					<li>Set an initial debounceTime to control the emit frequency</li>
+					<li>React on first load using <code>emitOnStart</code></li>
+					<li>Harness the power of <a href="https://rxjs.dev/guide/operators">RxJs Operators</a> to do wonders!</li>
 				</ul>
 				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
 					<h2>Installation</h2>
 				</a>
-				<p> Checkout github packages for instructions</p>
+				<p>Checkout github packages for instructions.</p>
+				<a href="#download-twig-it-artifacts-from-github-packages" id="download-twig-it-artifacts-from-github-packages" style="color: inherit; text-decoration: none;">
+					<h3>Download @twig-it artifacts from Github Packages</h3>
+				</a>
+				<ul>
+					<li><p>Create an <code>.npmrc</code> file in your repo</p>
+					</li>
+					<li><p>Add @twig-it:registry=<a href="https://npm.pkg.github.com">https://npm.pkg.github.com</a></p>
+					</li>
+					<li><p>Create a PAT that has read access to Github Packages. Let&#39;s call this token <code>GPRead</code></p>
+					</li>
+					<li><p>Set this token in npm for your CI runs. Example below:</p>
+						<pre><code><span style="color: #000000"> - name: </span><span style="color: #001080">Npm</span><span style="color: #000000"> </span><span style="color: #001080">Install</span>
+<span style="color: #000000">     run: </span><span style="color: #001080">npm</span><span style="color: #000000"> </span><span style="color: #001080">config</span><span style="color: #000000"> </span><span style="color: #001080">set</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;//npm.pkg.github.com/:_authToken&#039;</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;${GPRREAD}&quot;</span><span style="color: #000000"> &amp;&amp; </span><span style="color: #001080">npm</span><span style="color: #000000"> </span><span style="color: #001080">ci</span>
+<span style="color: #000000">     env:</span>
+<span style="color: #000000">       GPRREAD: </span><span style="color: #001080">$</span><span style="color: #000000">{{ </span><span style="color: #001080">secrets</span><span style="color: #000000">.</span><span style="color: #0070C1">GPREAD</span><span style="color: #000000"> }}</span>
+
+</code></pre>
+					</li>
+				</ul>
+				<a href="#example" id="example" style="color: inherit; text-decoration: none;">
+					<h2>Example:</h2>
+				</a>
+				<p>An Example usage where <code>from-resize</code> will be useful.</p>
+				<ul>
+					<li>An SVG/Canvas chart inside an HTML container</li>
+					<li>After initial render, the dimension of this HTML container changes without a window resize event.</li>
+					<li>This requires us to redraw the chart. To do this, we need to watch the container for dimension changes and then redraw.</li>
+				</ul>
 				<a href="#demo" id="demo" style="color: inherit; text-decoration: none;">
 					<h2>Demo</h2>
 				</a>
-				<p> Checkout <a href="https://samskara-ui.github.io/from-resize/">Demo page!</a></p>
+				<p>Checkout <a href="https://twig-it.github.io/from-resize/">Demo page!</a></p>
 				<a href="#api-docs" id="api-docs" style="color: inherit; text-decoration: none;">
 					<h2>Api Docs</h2>
 				</a>
-				<p> Checkout <a href="https://samskara-ui.github.io/from-resize/types/index.html">Api docs!</a></p>
+				<p>Checkout <a href="https://twig-it.github.io/from-resize/types/index.html">Api docs!</a></p>
+				<p><a href="https://github.com/twig-it/typescript-starter-template">Built with Typescript Starter Template</a></p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">

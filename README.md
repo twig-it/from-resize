@@ -1,4 +1,5 @@
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)   [Built with Typescript Starter Template](https://github.com/twig-it/typescript-starter-template)
+
 
 # From Resize
 
@@ -38,7 +39,7 @@ An Example usage where `from-resize` will be useful.
 - This requires us to redraw the chart. To do this, we need to watch the container for dimension changes and then redraw.
 
 ## Demo
-
+ 
 Checkout [Demo page!](https://twig-it.github.io/from-resize/)
 
 ## Api Docs

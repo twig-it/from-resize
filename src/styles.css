@@ -48,9 +48,10 @@ body {
 }
 
 .watch-direction {
-  margin-left: 16px;
+  margin-left: 100px;
   display: flex;
   text-transform: capitalize;
+  margin-right: 100px;
 }
 
 .remove-child {
@@ -98,4 +99,10 @@ body {
 
 .button {
   margin-left: 16px;
+  height: 32px;
+  background: white;
+  border-radius: 4px;
+  color: blue;
+  cursor: pointer;
+  border: 1px solid blue;
 }

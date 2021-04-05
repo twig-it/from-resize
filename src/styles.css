@@ -5,10 +5,11 @@ h2 {
 
 .app-root {
   width: 100%;
-  height: 100vh;
-
+  height: 100%;
   display: flex;
   flex-direction: column;
+  padding: 24px;
+  box-sizing: border-box;
 }
 
 .title {
@@ -20,15 +21,11 @@ h2 {
   margin-left: 24px;
 }
 
-.row {
+.container {
+  height: 100%;
   width: 100%;
-  height: 200px;
-
   display: flex;
-}
-
-span {
-  width: 100px;
+  flex-direction: column;
 }
 
 .controls {
@@ -47,24 +44,44 @@ span {
 }
 
 .charts-container {
+  flex: 1 1 auto;
   display: flex;
+  flex-direction: column;
 }
 
-.child-1 {
+.top-child {
+  width: 100%;
+  height: 200px;
+  border: 1px solid blue;
+  margin-top: 8px;
+}
+
+.row {
+  flex: 1 1 auto;
+  display: flex;
+  margin-top: 8px;
+}
+
+.left-child {
   flex: 1 1 auto;
   width: 50%;
-  height: 200px;
   border: 1px solid red;
   display: flex;
   align-items: center;
+  margin-right: 8px;
 }
 
-.chart {
+.chart-parent {
   flex: 1 1 auto;
   width: 50%;
+  border: 1px solid green;
 }
 
 .canvas-chart {
   height: 100%;
   width: 100%;
+}
+
+.button {
+  margin-left: 16px;
 }

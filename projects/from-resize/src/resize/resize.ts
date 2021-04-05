@@ -2,6 +2,12 @@ import { defaultsDeep } from 'lodash-es';
 import { Observable } from 'rxjs';
 import { debounceTime, filter, map, pairwise, startWith } from 'rxjs/operators';
 
+/**
+ *
+ * @param element Container HTML Element
+ * @param options ResizeOptions
+ * @returns Observable<ClientRect>
+ */
 export const fromResize: (element: Element, options?: Partial<ResizeOptions>) => Observable<ClientRect> = (
   element: Element,
   options?: Partial<ResizeOptions>

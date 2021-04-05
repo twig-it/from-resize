@@ -1,7 +1,7 @@
 import { switchMap } from 'rxjs/operators';
 import { fromResize } from '@twig-it/from-resize';
 import { ResizeDirection } from '@twig-it/from-resize';
-import { chartJsOptions } from './charts-js-example/chart-js';
+import { chartJsOptions } from './charts-options/chart-js';
 import './styles.css';
 import { Chart } from 'chart.js';
 import { combineLatest, EMPTY, Observable } from 'rxjs';

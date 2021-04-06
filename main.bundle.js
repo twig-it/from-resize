@@ -14076,7 +14076,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n  font-family: 'Work Sans', sans-serif;\n}\n\n.app-root {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  padding: 8px 24px 24px 24px;\n  box-sizing: border-box;\n}\n\n.header {\n  display: flex;\n  align-items: center;\n  border-bottom: 1px solid gray;\n  padding-bottom: 8px;\n  box-sizing: border-box;\n}\n\n.title {\n  font-size: 24px;\n  font-weight: bold;\n}\n\n.link {\n  margin-left: 12px;\n  font-size: 16px;\n}\n\n.separator {\n  flex: 1 1 auto;\n}\n\n.app-content {\n  margin-top: 24px;\n  flex: 1 1 auto;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n}\n\n.controls {\n  display: flex;\n  align-items: center;\n  height: 40px;\n}\n\n.resize {\n  display: flex;\n  align-items: center;\n}\n\n.watch-direction {\n  margin-left: 100px;\n  display: flex;\n  align-items: center;\n  text-transform: capitalize;\n  margin-right: 100px;\n}\n\n.remove-child {\n  margin-left: 16px;\n}\n\n.charts-container {\n  flex: 1 1 auto;\n  display: flex;\n  flex-direction: column;\n}\n\n.top-child {\n  width: 100%;\n  height: 200px;\n  border: 1px solid blue;\n  margin-top: 8px;\n}\n\n.row {\n  flex: 1 1 auto;\n  display: flex;\n  margin-top: 8px;\n}\n\n.left-child {\n  flex: 1 1 auto;\n  width: 50%;\n  border: 1px solid red;\n  display: flex;\n  align-items: center;\n  margin-right: 8px;\n}\n\n.chart-parent {\n  flex: 1 1 auto;\n  width: 50%;\n  border: 1px solid green;\n}\n\n.canvas-chart {\n  height: 100%;\n  width: 100%;\n}\n\n.button {\n  margin-left: 16px;\n  height: 32px;\n  background: white;\n  border-radius: 4px;\n  color: blue;\n  cursor: pointer;\n  border: 1px solid blue;\n}\n\ninput[type='checkbox'] {\n  width: 16px;\n  height: 16px;\n}\n\nlabel {\n  margin-left: 6px;\n}\n", "",{"version":3,"sources":["webpack://./src/styles.css"],"names":[],"mappings":"AAAA;EACE,oCAAoC;AACtC;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,aAAa;EACb,sBAAsB;EACtB,2BAA2B;EAC3B,sBAAsB;AACxB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,6BAA6B;EAC7B,mBAAmB;EACnB,sBAAsB;AACxB;;AAEA;EACE,eAAe;EACf,iBAAiB;AACnB;;AAEA;EACE,iBAAiB;EACjB,eAAe;AACjB;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,gBAAgB;EAChB,cAAc;EACd,WAAW;EACX,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,YAAY;AACd;;AAEA;EACE,aAAa;EACb,mBAAmB;AACrB;;AAEA;EACE,kBAAkB;EAClB,aAAa;EACb,mBAAmB;EACnB,0BAA0B;EAC1B,mBAAmB;AACrB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,cAAc;EACd,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,WAAW;EACX,aAAa;EACb,sBAAsB;EACtB,eAAe;AACjB;;AAEA;EACE,cAAc;EACd,aAAa;EACb,eAAe;AACjB;;AAEA;EACE,cAAc;EACd,UAAU;EACV,qBAAqB;EACrB,aAAa;EACb,mBAAmB;EACnB,iBAAiB;AACnB;;AAEA;EACE,cAAc;EACd,UAAU;EACV,uBAAuB;AACzB;;AAEA;EACE,YAAY;EACZ,WAAW;AACb;;AAEA;EACE,iBAAiB;EACjB,YAAY;EACZ,iBAAiB;EACjB,kBAAkB;EAClB,WAAW;EACX,eAAe;EACf,sBAAsB;AACxB;;AAEA;EACE,WAAW;EACX,YAAY;AACd;;AAEA;EACE,gBAAgB;AAClB","sourcesContent":["body {\n  font-family: 'Work Sans', sans-serif;\n}\n\n.app-root {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  padding: 8px 24px 24px 24px;\n  box-sizing: border-box;\n}\n\n.header {\n  display: flex;\n  align-items: center;\n  border-bottom: 1px solid gray;\n  padding-bottom: 8px;\n  box-sizing: border-box;\n}\n\n.title {\n  font-size: 24px;\n  font-weight: bold;\n}\n\n.link {\n  margin-left: 12px;\n  font-size: 16px;\n}\n\n.separator {\n  flex: 1 1 auto;\n}\n\n.app-content {\n  margin-top: 24px;\n  flex: 1 1 auto;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n}\n\n.controls {\n  display: flex;\n  align-items: center;\n  height: 40px;\n}\n\n.resize {\n  display: flex;\n  align-items: center;\n}\n\n.watch-direction {\n  margin-left: 100px;\n  display: flex;\n  align-items: center;\n  text-transform: capitalize;\n  margin-right: 100px;\n}\n\n.remove-child {\n  margin-left: 16px;\n}\n\n.charts-container {\n  flex: 1 1 auto;\n  display: flex;\n  flex-direction: column;\n}\n\n.top-child {\n  width: 100%;\n  height: 200px;\n  border: 1px solid blue;\n  margin-top: 8px;\n}\n\n.row {\n  flex: 1 1 auto;\n  display: flex;\n  margin-top: 8px;\n}\n\n.left-child {\n  flex: 1 1 auto;\n  width: 50%;\n  border: 1px solid red;\n  display: flex;\n  align-items: center;\n  margin-right: 8px;\n}\n\n.chart-parent {\n  flex: 1 1 auto;\n  width: 50%;\n  border: 1px solid green;\n}\n\n.canvas-chart {\n  height: 100%;\n  width: 100%;\n}\n\n.button {\n  margin-left: 16px;\n  height: 32px;\n  background: white;\n  border-radius: 4px;\n  color: blue;\n  cursor: pointer;\n  border: 1px solid blue;\n}\n\ninput[type='checkbox'] {\n  width: 16px;\n  height: 16px;\n}\n\nlabel {\n  margin-left: 6px;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n  font-family: 'Work Sans', sans-serif;\n}\n\n.app-root {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  padding: 8px 24px 24px 24px;\n  box-sizing: border-box;\n}\n\n.header {\n  display: flex;\n  align-items: center;\n  border-bottom: 1px solid gray;\n  padding-bottom: 8px;\n  box-sizing: border-box;\n}\n\n.title {\n  font-size: 24px;\n  font-weight: bold;\n}\n\n.link {\n  margin-left: 12px;\n  font-size: 16px;\n}\n\n.separator {\n  flex: 1 1 auto;\n}\n\n.app-content {\n  margin-top: 24px;\n  flex: 1 1 auto;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n}\n\n.controls {\n  display: flex;\n  align-items: center;\n  height: 40px;\n}\n\n.resize {\n  display: flex;\n  align-items: center;\n}\n\n.watch-direction {\n  margin-left: 100px;\n  display: flex;\n  align-items: center;\n  text-transform: capitalize;\n  margin-right: 100px;\n}\n\n.remove-child {\n  margin-left: 16px;\n}\n\n.charts-container {\n  flex: 1 1 auto;\n  display: flex;\n  flex-direction: column;\n}\n\n.top-child {\n  width: 100%;\n  height: 200px;\n  border: 1px solid blue;\n  margin-top: 8px;\n}\n\n.row {\n  flex: 1 1 auto;\n  display: flex;\n  margin-top: 8px;\n}\n\n.left-child {\n  flex: 1 1 auto;\n  width: 50%;\n  border: 1px solid red;\n  display: flex;\n  align-items: center;\n  margin-right: 8px;\n}\n\n.chart-parent {\n  flex: 1 1 auto;\n  width: 50%;\n  border: 1px solid green;\n}\n\n.canvas-chart {\n  height: 100%;\n  width: 100%;\n}\n\n.button {\n  margin-left: 16px;\n  height: 32px;\n  background: white;\n  border-radius: 4px;\n  color: blue;\n  cursor: pointer;\n  border: 1px solid blue;\n}\n\ninput[type='checkbox'] {\n  width: 16px;\n  height: 16px;\n}\n\nlabel {\n  margin-left: 6px;\n}\n\n.hidden {\n  visibility: hidden;\n}\n", "",{"version":3,"sources":["webpack://./src/styles.css"],"names":[],"mappings":"AAAA;EACE,oCAAoC;AACtC;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,aAAa;EACb,sBAAsB;EACtB,2BAA2B;EAC3B,sBAAsB;AACxB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,6BAA6B;EAC7B,mBAAmB;EACnB,sBAAsB;AACxB;;AAEA;EACE,eAAe;EACf,iBAAiB;AACnB;;AAEA;EACE,iBAAiB;EACjB,eAAe;AACjB;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,gBAAgB;EAChB,cAAc;EACd,WAAW;EACX,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,YAAY;AACd;;AAEA;EACE,aAAa;EACb,mBAAmB;AACrB;;AAEA;EACE,kBAAkB;EAClB,aAAa;EACb,mBAAmB;EACnB,0BAA0B;EAC1B,mBAAmB;AACrB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,cAAc;EACd,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,WAAW;EACX,aAAa;EACb,sBAAsB;EACtB,eAAe;AACjB;;AAEA;EACE,cAAc;EACd,aAAa;EACb,eAAe;AACjB;;AAEA;EACE,cAAc;EACd,UAAU;EACV,qBAAqB;EACrB,aAAa;EACb,mBAAmB;EACnB,iBAAiB;AACnB;;AAEA;EACE,cAAc;EACd,UAAU;EACV,uBAAuB;AACzB;;AAEA;EACE,YAAY;EACZ,WAAW;AACb;;AAEA;EACE,iBAAiB;EACjB,YAAY;EACZ,iBAAiB;EACjB,kBAAkB;EAClB,WAAW;EACX,eAAe;EACf,sBAAsB;AACxB;;AAEA;EACE,WAAW;EACX,YAAY;AACd;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,kBAAkB;AACpB","sourcesContent":["body {\n  font-family: 'Work Sans', sans-serif;\n}\n\n.app-root {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  padding: 8px 24px 24px 24px;\n  box-sizing: border-box;\n}\n\n.header {\n  display: flex;\n  align-items: center;\n  border-bottom: 1px solid gray;\n  padding-bottom: 8px;\n  box-sizing: border-box;\n}\n\n.title {\n  font-size: 24px;\n  font-weight: bold;\n}\n\n.link {\n  margin-left: 12px;\n  font-size: 16px;\n}\n\n.separator {\n  flex: 1 1 auto;\n}\n\n.app-content {\n  margin-top: 24px;\n  flex: 1 1 auto;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n}\n\n.controls {\n  display: flex;\n  align-items: center;\n  height: 40px;\n}\n\n.resize {\n  display: flex;\n  align-items: center;\n}\n\n.watch-direction {\n  margin-left: 100px;\n  display: flex;\n  align-items: center;\n  text-transform: capitalize;\n  margin-right: 100px;\n}\n\n.remove-child {\n  margin-left: 16px;\n}\n\n.charts-container {\n  flex: 1 1 auto;\n  display: flex;\n  flex-direction: column;\n}\n\n.top-child {\n  width: 100%;\n  height: 200px;\n  border: 1px solid blue;\n  margin-top: 8px;\n}\n\n.row {\n  flex: 1 1 auto;\n  display: flex;\n  margin-top: 8px;\n}\n\n.left-child {\n  flex: 1 1 auto;\n  width: 50%;\n  border: 1px solid red;\n  display: flex;\n  align-items: center;\n  margin-right: 8px;\n}\n\n.chart-parent {\n  flex: 1 1 auto;\n  width: 50%;\n  border: 1px solid green;\n}\n\n.canvas-chart {\n  height: 100%;\n  width: 100%;\n}\n\n.button {\n  margin-left: 16px;\n  height: 32px;\n  background: white;\n  border-radius: 4px;\n  color: blue;\n  cursor: pointer;\n  border: 1px solid blue;\n}\n\ninput[type='checkbox'] {\n  width: 16px;\n  height: 16px;\n}\n\nlabel {\n  margin-left: 6px;\n}\n\n.hidden {\n  visibility: hidden;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -48749,6 +48749,100 @@ var SwitchMapSubscriber = /*@__PURE__*/ (function (_super) {
 
 /***/ }),
 
+/***/ "./node_modules/rxjs/_esm5/internal/operators/tap.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/rxjs/_esm5/internal/operators/tap.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "tap": () => (/* binding */ tap)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/rxjs/node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _Subscriber__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Subscriber */ "./node_modules/rxjs/_esm5/internal/Subscriber.js");
+/* harmony import */ var _util_noop__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../util/noop */ "./node_modules/rxjs/_esm5/internal/util/noop.js");
+/* harmony import */ var _util_isFunction__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../util/isFunction */ "./node_modules/rxjs/_esm5/internal/util/isFunction.js");
+/** PURE_IMPORTS_START tslib,_Subscriber,_util_noop,_util_isFunction PURE_IMPORTS_END */
+
+
+
+
+function tap(nextOrObserver, error, complete) {
+    return function tapOperatorFunction(source) {
+        return source.lift(new DoOperator(nextOrObserver, error, complete));
+    };
+}
+var DoOperator = /*@__PURE__*/ (function () {
+    function DoOperator(nextOrObserver, error, complete) {
+        this.nextOrObserver = nextOrObserver;
+        this.error = error;
+        this.complete = complete;
+    }
+    DoOperator.prototype.call = function (subscriber, source) {
+        return source.subscribe(new TapSubscriber(subscriber, this.nextOrObserver, this.error, this.complete));
+    };
+    return DoOperator;
+}());
+var TapSubscriber = /*@__PURE__*/ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__.__extends(TapSubscriber, _super);
+    function TapSubscriber(destination, observerOrNext, error, complete) {
+        var _this = _super.call(this, destination) || this;
+        _this._tapNext = _util_noop__WEBPACK_IMPORTED_MODULE_1__.noop;
+        _this._tapError = _util_noop__WEBPACK_IMPORTED_MODULE_1__.noop;
+        _this._tapComplete = _util_noop__WEBPACK_IMPORTED_MODULE_1__.noop;
+        _this._tapError = error || _util_noop__WEBPACK_IMPORTED_MODULE_1__.noop;
+        _this._tapComplete = complete || _util_noop__WEBPACK_IMPORTED_MODULE_1__.noop;
+        if ((0,_util_isFunction__WEBPACK_IMPORTED_MODULE_2__.isFunction)(observerOrNext)) {
+            _this._context = _this;
+            _this._tapNext = observerOrNext;
+        }
+        else if (observerOrNext) {
+            _this._context = observerOrNext;
+            _this._tapNext = observerOrNext.next || _util_noop__WEBPACK_IMPORTED_MODULE_1__.noop;
+            _this._tapError = observerOrNext.error || _util_noop__WEBPACK_IMPORTED_MODULE_1__.noop;
+            _this._tapComplete = observerOrNext.complete || _util_noop__WEBPACK_IMPORTED_MODULE_1__.noop;
+        }
+        return _this;
+    }
+    TapSubscriber.prototype._next = function (value) {
+        try {
+            this._tapNext.call(this._context, value);
+        }
+        catch (err) {
+            this.destination.error(err);
+            return;
+        }
+        this.destination.next(value);
+    };
+    TapSubscriber.prototype._error = function (err) {
+        try {
+            this._tapError.call(this._context, err);
+        }
+        catch (err) {
+            this.destination.error(err);
+            return;
+        }
+        this.destination.error(err);
+    };
+    TapSubscriber.prototype._complete = function () {
+        try {
+            this._tapComplete.call(this._context);
+        }
+        catch (err) {
+            this.destination.error(err);
+            return;
+        }
+        return this.destination.complete();
+    };
+    return TapSubscriber;
+}(_Subscriber__WEBPACK_IMPORTED_MODULE_3__.Subscriber));
+//# sourceMappingURL=tap.js.map
+
+
+/***/ }),
+
 /***/ "./node_modules/rxjs/_esm5/internal/scheduled/scheduleArray.js":
 /*!*********************************************************************!*\
   !*** ./node_modules/rxjs/_esm5/internal/scheduled/scheduleArray.js ***!
@@ -49665,6 +49759,24 @@ function isScheduler(value) {
     return value && typeof value.schedule === 'function';
 }
 //# sourceMappingURL=isScheduler.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/rxjs/_esm5/internal/util/noop.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/rxjs/_esm5/internal/util/noop.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "noop": () => (/* binding */ noop)
+/* harmony export */ });
+/** PURE_IMPORTS_START  PURE_IMPORTS_END */
+function noop() { }
+//# sourceMappingURL=noop.js.map
 
 
 /***/ }),
@@ -50839,14 +50951,15 @@ var __webpack_exports__ = {};
   !*** ./src/index.ts ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/internal/operators/switchMap.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/internal/operators/tap.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/internal/operators/switchMap.js");
 /* harmony import */ var _twig_it_from_resize__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @twig-it/from-resize */ "./dist/from-resize/from-resize.umd.js");
 /* harmony import */ var _twig_it_from_resize__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_twig_it_from_resize__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _charts_options_chart_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./charts-options/chart-js */ "./src/charts-options/chart-js.ts");
 /* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles.css */ "./src/styles.css");
 /* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! chart.js */ "./node_modules/chart.js/dist/chart.esm.js");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/internal/observable/combineLatest.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/internal/observable/empty.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/internal/observable/empty.js");
 /* harmony import */ var _checkbox_checkbox__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./checkbox/checkbox */ "./src/checkbox/checkbox.ts");
 /* harmony import */ var _radio_radio__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./radio/radio */ "./src/radio/radio.ts");
 /* harmony import */ var _builder__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./builder */ "./src/builder.ts");
@@ -50894,13 +51007,16 @@ var chartContext = chartCanvasElement.getContext('2d');
 var chartObject = new chart_js__WEBPACK_IMPORTED_MODULE_3__.Chart(chartContext, _charts_options_chart_js__WEBPACK_IMPORTED_MODULE_1__.chartJsOptions);
 // User Resize
 (0,rxjs__WEBPACK_IMPORTED_MODULE_7__.combineLatest)([useResizeClicked$, directionClicked$])
-    .pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_8__.switchMap)(function (_a) {
+    .pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_8__.tap)(function (_a) {
+    var _b = __read(_a, 1), useResize = _b[0];
+    !useResize ? watchDirectionElement.classList.add('hidden') : watchDirectionElement.classList.remove('hidden');
+}), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_9__.switchMap)(function (_a) {
     var _b = __read(_a, 2), useResize = _b[0], direction = _b[1];
-    return useResize ? (0,_twig_it_from_resize__WEBPACK_IMPORTED_MODULE_0__.fromResize)(chartParentElement, { direction: direction, emitOnStart: false }) : rxjs__WEBPACK_IMPORTED_MODULE_9__.EMPTY;
+    return useResize ? (0,_twig_it_from_resize__WEBPACK_IMPORTED_MODULE_0__.fromResize)(chartParentElement, { direction: direction, emitOnStart: false }) : rxjs__WEBPACK_IMPORTED_MODULE_10__.EMPTY;
 }))
     .subscribe(function (dimension) {
     chartObject.resize(dimension.width, dimension.height);
-    console.log("From Resize: direction " + "all" /* All */ + " -> Updated dimension " + dimension.width + " height: " + dimension.height + " " + chartObject.aspectRatio);
+    console.log("From Resize: -> Updated dimension " + dimension.width + " height: " + dimension.height);
 });
 
 })();

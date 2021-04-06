@@ -52,6 +52,9 @@ Checkout [Api docs!](https://twig-it.github.io/from-resize/types/index.html)
 
 [Built with Typescript Starter Template](https://github.com/twig-it/typescript-starter-template)
 
+## Blogs
+- [Resize Observer with an RXJS Twist!](https://anand-tiwary.medium.com/resize-observer-with-an-rxjs-twist-8dee5bdedce3)
+
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):

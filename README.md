@@ -49,11 +49,12 @@ Checkout [Demo page!](https://twig-it.github.io/from-resize/)
 
 Checkout [Api docs!](https://twig-it.github.io/from-resize/types/index.html)
 
-
-[Built with Typescript Starter Template](https://github.com/twig-it/typescript-starter-template)
-
 ## Blogs
 - [Resize Observer with an RXJS Twist!](https://anand-tiwary.medium.com/resize-observer-with-an-rxjs-twist-8dee5bdedce3)
+
+## Build With
+
+- [Typescript Starter Template](https://github.com/twig-it/typescript-starter-template)
 
 ## Contributors ✨
 

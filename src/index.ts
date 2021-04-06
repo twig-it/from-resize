@@ -1,4 +1,4 @@
-import { switchMap } from 'rxjs/operators';
+import { switchMap, tap } from 'rxjs/operators';
 import { fromResize } from '@twig-it/from-resize';
 import { ResizeDirection } from '@twig-it/from-resize';
 import { chartJsOptions } from './charts-options/chart-js';
@@ -40,13 +40,14 @@ const chartObject = new Chart(chartContext, chartJsOptions);
 
 combineLatest([useResizeClicked$, directionClicked$])
   .pipe(
+    tap(([useResize]) => {
+      !useResize ? watchDirectionElement.classList.add('hidden') : watchDirectionElement.classList.remove('hidden');
+    }),
     switchMap(([useResize, direction]) =>
       useResize ? fromResize(chartParentElement, { direction: direction, emitOnStart: false }) : EMPTY
     )
   )
   .subscribe((dimension: ClientRect) => {
     chartObject.resize(dimension.width, dimension.height);
-    console.log(
-      `From Resize: direction ${ResizeDirection.All} -> Updated dimension ${dimension.width} height: ${dimension.height} ${chartObject.aspectRatio}`
-    );
+    console.log(`From Resize: -> Updated dimension ${dimension.width} height: ${dimension.height}`);
   });

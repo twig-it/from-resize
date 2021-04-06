@@ -121,3 +121,7 @@ input[type='checkbox'] {
 label {
   margin-left: 6px;
 }
+
+.hidden {
+  visibility: hidden;
+}
